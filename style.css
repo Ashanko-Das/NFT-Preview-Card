@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Declaring all the variables */
+:root{
+    --bg-main: hsl(217, 54%, 11%);
+    --bg-card: hsl(216, 50%, 16%);
+    --bg-sepLine: hsl(215, 32%, 27%);
+
+    --color-primary: hsl(215, 51%, 70%);
+    --color-highlight:hsl(178, 100%, 50%);
+
+    --font-family:'Outfit', sans-serif;
+    --fs-body: 15px;
+    --fw-regular: 300;
+    --fw-medium: 400;
+    --fw-bold:600;
+}
+
+/* Designing the body layout */
+body{
+    background-color: var(--bg-main);
+    color: var(--color-primary);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
+}
+
+
+
+/* Card Styling */
+.main-card{
+    height: 71%;
+    width: 300px;
+    background-color: var(--bg-card);
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* NFT image part */
+.card__img--wrapper{
+    position: relative;
+    cursor: pointer;
+}
+.card__img{
+    height: 260px;
+    width: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+/* NFT image overlay */
+.card__img--overlay{
+    background-color: hsl(178, 100%, 50%,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 260px;
+    width: 260px;
+    border-radius: 10px;
+    transition: all 0.25s ease-in-out;
+    transform: scale(0);
+}
+.card__img--wrapper:hover .card__img--overlay{
+    transform: scale(1);
+}
+
+
+
+/* Card description part */
+.card-desc{
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: var(--fw-bold);
+    color: #fff;
+}
+.card-desc:hover{
+    color: var(--color-highlight);
+    cursor: pointer;
+}
+
+/* Card details */
+.card__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+
+/* Balance info section */
+.card__info--balance{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    color: var(--color-highlight);
+    font-weight: var(--fw-medium);
+}
+
+
+/* Time section */
+.card__info--time{
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* Separation Line */
+hr{
+    border-color: var(--bg-sepLine);
+}
+
+
+/* Owner details  */
+.owner__info{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.owner__info--img{
+    height: 40px;
+    width: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.owner__info--name{
+    color: #fff;
+    cursor: pointer;
+    font-weight: var(--fw-medium);
+}
+.owner__info--name:hover{
+    color:var(--color-highlight);
+}
+
+
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
